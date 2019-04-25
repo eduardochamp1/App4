@@ -75,14 +75,6 @@ namespace App4.Modelos
             // modifica o valor da formatura
             this.formatura = 8 - this.periodo;
         }
-
-        // método para verificar se é possível a matrícula do aluno na disciplina
-        public bool Matricular(Disciplina disciplina)
-        {
-            // retorna se o período é igual ao semestre da disciplina
-            return this.Periodo == disciplina.Semestre;
-        }
-
         // método para verificar se é possível a matrícula do aluno na disciplina
         public int Matricular(Disciplina disciplina, int periodo)
         {
@@ -94,6 +86,18 @@ namespace App4.Modelos
             } else
             {
                 // retorna p semestre da disciplina
+                return disciplina.Semestre;
+            }
+        }
+        //exercioc 3.1
+        public int Matricular(Disciplina disciplina)
+        {
+           if(disciplina.Semestre < this.periodo)
+            {
+                return (disciplina.Semestre + this.formatura);
+            }
+            else
+            {
                 return disciplina.Semestre;
             }
         }

@@ -4,9 +4,14 @@
              x:Class="App4.MatriculaPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Matricula"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Picker x:Name="Picker01" Title="Aluno"></Picker>
+            <Picker x:Name="Picker02" Title="Disciplina"></Picker>
+            <Entry x:Name="Entry01" Keyboard="Numeric" Placeholder="Periodo" />
+            <Button x:Name="Button" Text="Matriclular"
+                HorizontalOptions="Center"
+                Clicked="OnButtonClicked" />
+
+            <Label x:Name="label01" Text=""/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

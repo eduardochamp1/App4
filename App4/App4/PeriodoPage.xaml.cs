@@ -19,7 +19,7 @@ namespace App4
             foreach (Aluno aluno in Listas.Alunos)
             {
                 // adicionar um elemento na caixa de seleção
-                Picker.Items.Add(aluno.Matricula + " - " + aluno.Matricula);
+                Picker.Items.Add(aluno.Matricula + " - " + aluno.Nome);
             }
         }
 
@@ -36,6 +36,7 @@ namespace App4
                 // alterar o label com o valor da formatura
                 Label.Text = aluno.Formatura.ToString();
             }
+            
         }
 
     }
